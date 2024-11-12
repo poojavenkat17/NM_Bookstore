@@ -9,7 +9,7 @@ This project is a full-stack bookstore application, allowing users to browse, se
 ## Project Structure
 
 ```
-book-store-master/
+book-store/
 ├── backend/
 │   ├── models/
 │   │   └── bookModel.js          # Defines the MongoDB schema for book documents
