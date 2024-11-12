@@ -34,7 +34,7 @@ book-store/
 
 1. **Clone the repository to your local machine**:
    ```bash
-   git clone https://github.com/yourusername/book-store.git
+   git clone https://github.com/poojavenkat17/NM_Bookstore.git
    ```
 
 2. **Navigate to the project directory**:
