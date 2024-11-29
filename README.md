@@ -1,89 +1,130 @@
 
 
-# Bookstore Project
-
-## Overview
-
-This project is a full-stack bookstore application, allowing users to browse, search, and manage a collection of books. It uses Node.js and Express for the backend API, MongoDB for data storage, and a React frontend styled with Tailwind CSS.
+# Book Store
 
 ## Project Structure
-
+The project is organized as follows:
 ```
-book-store/
-├── backend/
-│   ├── models/
-│   │   └── bookModel.js          # Defines the MongoDB schema for book documents
-│   ├── routes/
-│   │   ├── booksRoute.js         # Handles book-related API routes (CRUD operations)
-│   │   └── index.js              # Sets up backend API routes and server configuration
-├── frontend/
-│   ├── public/                   # Holds static files like images, icons, etc.
-│   ├── src/                      # Main frontend application code
-│   ├── .eslintrc.cjs             # ESLint configuration for code quality and standards
-│   ├── index.html                # Main HTML file to load the React app
-│   ├── package-lock.json         # Auto-generated dependencies lock file for frontend
-│   ├── package.json              # Holds project details and dependencies for frontend
-│   ├── postcss.config.js         # Configuration for PostCSS (used with Tailwind CSS)
-│   ├── README.md                 # Project description and usage instructions
-│   ├── tailwind.config.js        # Tailwind CSS configuration file
-│   ├── vite.config.js            # Vite configuration for development and build
-│   └── .gitignore                # Specifies files to ignore in version control
+├── build
+│   ├── static
+│   │   ├── css
+│   │   ├── js
+│   │   └── media
+│   ├── _redirects
+│   ├── asset-manifest.json
+│   ├── favicon-icon.png
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── public
+│   ├── _redirects
+│   ├── favicon-icon.png
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── src
+├── package-lock.json
+├── package.json
+└── README.md
 ```
 
 ## Installation
-
-1. **Clone the repository to your local machine**:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/poojavenkat17/NM_Bookstore.git
+   git clone <repository-url>
    ```
-
-2. **Navigate to the project directory**:
+2. Navigate to the project directory:
    ```bash
    cd book-store
    ```
-
-3. **Install dependencies**:
-   - Backend:
-     ```bash
-     npm install
-     ```
-   - Frontend:
-     ```bash
-     cd frontend
-     npm install
-     ```
-
-4. **Create a `.env` file in the root directory**:
+3. Install dependencies:
+   ```bash
+   npm install
    ```
-   PORT=3000
-   mongoDBURL=your_mongodb_url
-   ```
-   Replace `your_mongodb_url` with the URL of your MongoDB database.
-
-
 
 ## Running the Application
-
-1. **Start the backend server**:
+1. Start the development server:
    ```bash
-   npm run dev
+   npm start
    ```
+2. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-2. **Start the frontend**:
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-
-3. **View the application**:
-   - Open your browser and navigate to `http://localhost:5173`.
+The page will reload automatically when changes are made, and lint errors will appear in the console.
 
 ## Usage
-
-- **User**: Browse the collection of books through cards and tables, view detailed descriptions, and add books to your cart for purchase.
-- **Admin**: Access the admin panel by logging in with your credentials. Manage books by creating new ones, editing existing entries, or deleting books from the collection.
+- The application provides features such as user authentication, product filtering, wishlist and cart management, and order summaries.
+- Razorpay is integrated for secure payment processing.
 
 ## Technologies Used
+1. **Frontend**:
+   - HTML
+   - CSS
+   - JavaScript
+   - React
+2. **Backend**:
+   - Node.js
+   - Express.js
+   - MongoDB (Deployed on Vercel)
 
-- **Backend**: Node.js, Express, MongoDB
-- **Frontend**: React
+## Features
+1. **User Authentication**:
+   - Signup, Login, and Logout functionality.
+2. **Landing Page**:
+   - Categories and New Arrivals section.
+3. **Product Listing Page**:
+   - Sort and filter products by price, genre, rating, availability, and delivery options.
+   - Clear all filters functionality.
+4. **Wishlist Management**:
+   - Add/remove items.
+   - Move items to the cart.
+5. **Cart Management**:
+   - Add/remove items.
+   - Adjust item quantities.
+   - Apply coupons.
+   - Move items to the wishlist.
+6. **Single Product Page**:
+   - Detailed product information.
+7. **Order Summary**:
+   - View ordered items.
+8. **Custom Toast Component**:
+   - Notifications for success, error, warning, and information.
+9. **Payment Integration**:
+   - Razorpay for secure transactions.
+10. **Orders Page**:
+   - List of previous orders.
+11. **Search Functionality**:
+   - Search books by name or author.
+12. **Pagination**:
+   - Navigate through product pages.
+
+## Contribution Guidelines
+You are welcome to contribute to this project! Please follow these steps:
+
+1. Fork the repository on GitHub.
+2. Clone your fork locally:
+   ```bash
+   git clone <your-fork-url>
+   ```
+3. Add the original repository as a remote upstream:
+   ```bash
+   git remote add upstream <original-repo-url>
+   ```
+4. Update your local copy with upstream changes:
+   ```bash
+   git pull upstream development
+   ```
+5. Create a new branch for your feature:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+6. Implement your feature and document your changes.
+7. Squash your commits into a single meaningful commit:
+   ```bash
+   git rebase -i HEAD~<number-of-commits>
+   ```
+8. Push your branch to your fork:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+9. Open a pull request targeting the development branch of the original repository.
+
